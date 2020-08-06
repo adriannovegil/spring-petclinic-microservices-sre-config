@@ -1,7 +1,10 @@
 # COMMON APPLICATION PROPERTIES
 
-# start services on random port by default
-server.port: 0
+server:
+  # start services on random port by default
+  port: 0
+  # The stop processing uses a timeout which provides a grace period during which existing requests will be allowed to complete but no new requests will be permitted
+  shutdown: graceful
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb
@@ -12,6 +15,16 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  cloud:
+    config:
+      # Allow the microservices to override the remote properties with their own System properties or config file
+      allow-override: true
+      # Override configuration with any local property source
+      override-none: true
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
@@ -30,20 +43,20 @@ spring.cloud.refresh.refreshable: false
 logging.level.org.springframework: INFO
 
 # Metrics
-management:
-  endpoint:
-    metrics:
-      enabled: true
-    prometheus:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  metrics:
-    export:
-      prometheus:
-        enabled: true
+#management:
+#  endpoint:
+#    metrics:
+#      enabled: true
+#    prometheus:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  metrics:
+#    export:
+#      prometheus:
+#        enabled: true
 
 ---
 spring:
