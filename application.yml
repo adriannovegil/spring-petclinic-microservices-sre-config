@@ -55,10 +55,11 @@ management:
         include: '*'
   metrics:
     tags:
-      application: ${spring.application.name}
+      application: MYAPPNAME
     export:
       prometheus:
         enabled: true
+
 
 ---
 spring:
