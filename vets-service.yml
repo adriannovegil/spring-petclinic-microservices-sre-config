@@ -3,6 +3,10 @@
     ttl: 60
     heap-size: 100
 
+spring:
+  application:
+    name: vets-service
+
 management:
   metrics:
     tags:
