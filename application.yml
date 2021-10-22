@@ -6,6 +6,10 @@ server:
   # The stop processing uses a timeout which provides a grace period during which existing requests will be allowed to complete but no new requests will be permitted
   shutdown: graceful
 
+spring:
+  application:
+    name: pet-clinic
+
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb
 spring:
@@ -53,7 +57,7 @@ management:
     web:
       exposure:
         include: '*'
-  metrics:    
+  metrics:
     export:
       prometheus:
         enabled: true

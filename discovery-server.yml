@@ -1,11 +1,7 @@
 ﻿server:
   port: 8761
 
-spring:
-  application:
-    name: discovery-server
-
-management:  
+management:
   metrics:
     tags:
       application: ${spring.application.name}
