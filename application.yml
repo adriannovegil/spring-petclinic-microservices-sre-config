@@ -60,7 +60,6 @@ management:
       prometheus:
         enabled: true
 
-
 ---
 spring:
   profiles: mysql

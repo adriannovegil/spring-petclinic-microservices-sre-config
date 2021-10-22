@@ -14,6 +14,10 @@ server:
     mime-types: application/json,text/css,application/javascript
     min-response-size: 2048
 
+spring:
+  application:
+    name: api-gateway
+
 # Internationalization
 spring.messages.basename: messages/messages
 
