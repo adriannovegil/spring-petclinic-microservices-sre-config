@@ -5,6 +5,11 @@ spring:
   application:
     name: admin-server
 
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
 ---
 spring:
   profiles: docker

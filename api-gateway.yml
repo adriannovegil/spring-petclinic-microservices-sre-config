@@ -18,6 +18,11 @@ spring:
   application:
     name: api-gateway
 
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
 # Internationalization
 spring.messages.basename: messages/messages
 

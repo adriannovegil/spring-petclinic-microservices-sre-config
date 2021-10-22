@@ -5,6 +5,11 @@ spring:
   application:
     name: discovery-server
 
+management:  
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
 eureka:
   instance:
     hostname: localhost
