@@ -38,7 +38,6 @@ management.endpoints.web.exposure.include: "*"
 # Waiting issue https://github.com/spring-projects/spring-boot/issues/13042
 spring.cloud.refresh.refreshable: false
 
-
 # Logging
 logging.level.org.springframework: INFO
 
