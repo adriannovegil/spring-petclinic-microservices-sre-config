@@ -22,10 +22,26 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+    web:
+      server:
+        request:
+          autotime:
+            percentiles=<comma-separated list of quantiles>
     distribution:
       percentiles-histogram:
-        http.server:
-          requests: true
+        http:
+          server:
+            requests: true
+      slo:
+        http:
+          server:
+            requests: 50ms, 100ms, 200ms, 400ms
+      percentiles:
+        http:
+          server:
+            requests: 0.5, 0.9, 0.95, 0.99, 0.999
+
+
 
 # Internationalization
 spring.messages.basename: messages/messages
