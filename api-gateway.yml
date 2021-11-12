@@ -21,12 +21,7 @@ spring:
 management:
   metrics:
     tags:
-      application: ${spring.application.name}
-    web:
-      server:
-        request:
-          autotime:
-            percentiles=<comma-separated list of quantiles>
+      application: ${spring.application.name}    
     distribution:
       percentiles-histogram:
         http:
