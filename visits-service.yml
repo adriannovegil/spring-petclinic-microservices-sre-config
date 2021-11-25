@@ -30,6 +30,8 @@ eureka:
 ---
 spring:
   profiles: docker
+  zipkin:
+    baseUrl: http://zipkin:9411
 server:
   port: 8082
 eureka:
