@@ -27,6 +27,9 @@ management:
         http:
           server:
             requests: true
+        resilience4j:
+          circuitbreaker:
+              calls: true
       slo:
         http:
           server:
