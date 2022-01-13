@@ -5,12 +5,10 @@ server:
   # The stop processing uses a timeout which provides a grace period during which existing requests will be allowed to complete but no new requests will be permitted
   shutdown: graceful
 
-# Custom config
-app:
-  logstash:
-    destination:
-      host: localhost
-      port: 5044
+# Logstash
+logstash:
+  host: localhost
+  port: 5044
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb

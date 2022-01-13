@@ -56,8 +56,6 @@ eureka:
       prometheus.scrape: "true"
       prometheus.path: "/actuator/prometheus"
 
-# Custom config
-app:
-  logstash:
-    destination:
-      host: logstash
+# Logstash
+logstash:
+  host: logstash
