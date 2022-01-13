@@ -19,6 +19,10 @@ management:
           server:
             requests: 0.5, 0.9, 0.95, 0.99, 0.999
 
+logstash:
+  host: localhost
+  port: 5044
+
 ---
 ﻿spring:
   profiles: default
@@ -27,6 +31,7 @@ eureka:
     # enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
 
+# Docker profile
 ---
 spring:
   profiles: docker
@@ -44,3 +49,6 @@ eureka:
     metadataMap:
       prometheus.scrape: "true"
       prometheus.path: "/actuator/prometheus"
+logstash:
+  host: logstash
+  port: 5044
