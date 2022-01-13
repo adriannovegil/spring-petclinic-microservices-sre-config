@@ -55,3 +55,8 @@ eureka:
     metadataMap:
       prometheus.scrape: "true"
       prometheus.path: "/actuator/prometheus"
+
+# Custom config
+logback:
+  destination:
+    url: logstash
