@@ -37,6 +37,8 @@ spring:
   profiles: docker
   zipkin:
     baseUrl: http://zipkin:9411
+  logstash:
+    host: logstash
 server:
   port: 8083
 eureka:
@@ -47,7 +49,3 @@ eureka:
     metadataMap:
       prometheus.scrape: "true"
       prometheus.path: "/actuator/prometheus"
-
-# Logstash
-logstash:
-  host: logstash

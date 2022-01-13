@@ -6,9 +6,6 @@ server:
   shutdown: graceful
 
 # Logstash
-logstash:
-  host: logstash
-  port: 5044
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb
@@ -28,7 +25,10 @@ spring:
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: none  
+  logstash:
+    host: logstash
+    port: 5044
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
