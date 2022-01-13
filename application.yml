@@ -7,7 +7,7 @@ server:
 
 # Logstash
 logstash:
-  host: localhost
+  host: logstash
   port: 5044
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
