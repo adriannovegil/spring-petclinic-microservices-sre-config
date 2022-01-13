@@ -19,10 +19,6 @@ management:
           server:
             requests: 0.5, 0.9, 0.95, 0.99, 0.999
 
-logstash:
-  host: localhost
-  port: 5044
-
 ---
 ﻿spring:
   profiles: default
@@ -36,9 +32,7 @@ eureka:
 spring:
   profiles: docker
   zipkin:
-    baseUrl: http://zipkin:9411
-  logstash:
-    host: logstash
+    baseUrl: http://zipkin:9411  
 server:
   port: 8082
 eureka:
@@ -49,6 +43,3 @@ eureka:
     metadataMap:
       prometheus.scrape: "true"
       prometheus.path: "/actuator/prometheus"
-logstash:
-  host: logstash
-  port: 5044
