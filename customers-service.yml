@@ -44,6 +44,7 @@ eureka:
       prometheus.path: "/actuator/prometheus"
 
 # Custom config
-logback:
-  destination:
-    url: logstash
+app:
+  logstash:
+    destination:
+      host: logstash

@@ -6,10 +6,11 @@ server:
   shutdown: graceful
 
 # Custom config
-logback:
-  destination:
-    url: localhost
-    port: 5044
+app:
+  logstash:
+    destination:
+      host: localhost
+      port: 5044
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb
