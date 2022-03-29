@@ -30,9 +30,12 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: none
-    properties:
-      hibernate:
-        generate_statistics: true
+    # If org.hibernate:hibernate-micrometer is on the classpath, all available
+    # Hibernate EntityManagerFactory instances that have statistics enabled are
+    # instrumented with a metric named hibernate.
+    #properties:
+    #  hibernate:
+    #    generate_statistics: true
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
