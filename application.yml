@@ -4,6 +4,12 @@ server:
   port: 0
   # The stop processing uses a timeout which provides a grace period during which existing requests will be allowed to complete but no new requests will be permitted
   shutdown: graceful
+  # Auto-configuration enables the instrumentation of Tomcat only when an
+  # MBeanRegistry is enabled. By default, the MBeanRegistry is disabled, but you 
+  # can enable it by setting server.tomcat.mbeanregistry.enabled to true.
+  tomcat:
+    mbeanregistry:
+      enabled: true
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: hsqldb
